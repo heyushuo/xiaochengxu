@@ -43,6 +43,8 @@
         <button type="primary" @click="showModal">showModal</button>
         
       </div>
+      <button style="width:50%;margin-top:10rpx;" type="primary"  open-type="share" >分享</button>
+      
     </div>
   </div>
 </template>
