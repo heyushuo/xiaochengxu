@@ -51,7 +51,6 @@
 
 <script>
 import card from '@/components/card'
-
 export default {
   created() {
     // this.onShareAppMessage()
