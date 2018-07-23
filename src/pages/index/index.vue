@@ -1,13 +1,19 @@
 <template>
   <div class="index">
     <div class="swiper">
-      <swiper indicator-dots="true" autoplay="true" interval="3000" circular="true" duration="500">
-        <block v-for="(item, index) in imgUrls" :key="index">
-          <swiper-item>
-            <image :src="item" class="slide-image" width="100%" height="150" />
+      <swiper class="swiper-container" indicator-dots="true" autoplay="true" interval="3000" circular="true" duration="500">
+        <block v-for="(item, index) in banner " :key="index">
+          <swiper-item class="swiper-item">
+            <image :src="item.image_url" class="slide-image" />
           </swiper-item>
         </block>
       </swiper>
+    </div>
+    <div class="channel">
+      <div v-for="(item, index) in channel" :key="index">
+        <img :src="item.icon_url" alt="">
+        <p>{{item.name}}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -17,18 +23,16 @@ import { get } from "../../utils";
 export default {
   data() {
     return {
-      imgUrls: [
-        "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
-        "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg",
-        "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg"
-      ]
+      banner: [],
+      channel: []
     };
   },
   components: {},
   methods: {
     async getData() {
-      var data = await get("http://192.168.2.1:9996/app/index/index");
-      console.log(data);
+      var data = await get("/index/index");
+      this.banner = data.banner;
+      this.channel = data.channel;
     }
   },
   created() {

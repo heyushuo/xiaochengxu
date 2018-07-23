@@ -1,14 +1,14 @@
 <script>
 export default {
-  created () {
+  created() {
     // 调用API从本地缓存中获取数据
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    const logs = wx.getStorageSync("logs") || [];
+    logs.unshift(Date.now());
+    wx.setStorageSync("logs", logs);
 
-    console.log('app created and cache logs by setStorageSync')
+    console.log("app created and cache logs by setStorageSync");
   }
-}
+};
 </script>
 
 <style>
@@ -21,6 +21,11 @@ export default {
   padding: 200rpx 0;
   box-sizing: border-box;
 }
+view,
+text {
+  font-size: 28rpx;
+}
+
 /* this rule will be remove */
 /* * {
   transition: width 2s;
@@ -28,6 +33,4 @@ export default {
   -webkit-transition: width 2s;
   -o-transition: width 2s;
 } */
-
-
 </style>
