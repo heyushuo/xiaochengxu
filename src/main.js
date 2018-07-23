@@ -15,8 +15,47 @@ export default {
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
+      navigationBarTitleText: '网易严选',
       navigationBarTextStyle: 'black'
-    }
+    },
+    tabBar: {
+      "backgroundColor": "#fafafa",
+      "borderStyle": "white",
+      "selectedColor": "#b4282d",
+      "color": "#666",
+      "list": [{
+          "pagePath": "pages/index/main",
+          "iconPath": "static/images/ic_menu_choice_nor.png",
+          "selectedIconPath": "static/images/ic_menu_choice_pressed.png",
+          "text": "首页"
+        },
+        {
+          "pagePath": "pages/index/main",
+          "iconPath": "static/images/ic_menu_topic_nor.png",
+          "selectedIconPath": "static/images/ic_menu_topic_pressed.png",
+          "text": "专题"
+        },
+        {
+          "pagePath": "pages/index/main",
+          "iconPath": "static/images/ic_menu_sort_nor.png",
+          "selectedIconPath": "static/images/ic_menu_sort_pressed.png",
+          "text": "分类"
+        },
+        {
+          "pagePath": "pages/index/main",
+          "iconPath": "static/images/ic_menu_shoping_nor.png",
+          "selectedIconPath": "static/images/ic_menu_shoping_pressed.png",
+          "text": "购物车"
+        },
+        {
+          "pagePath": "pages/index/main",
+          "iconPath": "static/images/ic_menu_me_nor.png",
+          "selectedIconPath": "static/images/ic_menu_me_pressed.png",
+          "text": "我的"
+        }
+      ]
+    },
+    // debug: true
+
   }
 }
